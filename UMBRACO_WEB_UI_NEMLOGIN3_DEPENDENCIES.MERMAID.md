@@ -29,7 +29,7 @@ flowchart LR
         MemberOptions["NemLogin3MemberLoginOptions<br/>provider name, groups, member type"]
     end
 
-    subgraph SharedSaml["Casko.NemLogin3.Web"]
+    subgraph SharedSaml["Casko.Authentication.NemLogin3.Web"]
         SamlRegistration["AddNemLogin3Saml<br/>shared SAML DI setup"]
         SamlOptions["NemLogin3Options<br/>SP URLs, requested attributes, LoA"]
         MetadataService["NemLogin3MetadataService<br/>SP metadata document"]

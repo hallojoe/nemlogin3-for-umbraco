@@ -1,10 +1,10 @@
-# Casko.NemLogin3.Web Code Structure
+# Casko.Authentication.NemLogin3.Web Code Structure
 
 ```mermaid
 flowchart TB
     Host["Host application<br/>standalone demo or Umbraco wrapper"]
 
-    subgraph Package["Casko.NemLogin3.Web"]
+    subgraph Package["Casko.Authentication.NemLogin3.Web"]
         subgraph Configuration["Configuration"]
             Extensions["NemLogin3WebExtensions<br/>- AddNemLogin3Web<br/>- AddNemLogin3Saml<br/>- UseNemLogin3Web"]
             Options["NemLogin3Options<br/>public URLs, paths, LoA and metadata fields"]
@@ -72,4 +72,3 @@ flowchart TB
     SessionCreation --> ItfoxtecMvc
     MetadataDocument --> ItfoxtecCore
 ```
-

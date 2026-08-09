@@ -1,6 +1,6 @@
 # Casko.NemLogin3ForUmbraco
 
-Umbraco 17 member and backoffice external login provider for NemLog-in 3. This project adapts the reusable SAML functionality from `Casko.NemLogin3.Web` into an Umbraco member authentication scheme named `UmbracoMembers.NemLogin3` and a backoffice user authentication scheme named `Umbraco.NemLogin3`.
+Umbraco 17 member and backoffice external login provider for NemLog-in 3. This project adapts the reusable SAML functionality from `Casko.Authentication.NemLogin3.Web` into an Umbraco member authentication scheme named `UmbracoMembers.NemLogin3` and a backoffice user authentication scheme named `Umbraco.NemLogin3`.
 
 ## Responsibility
 
@@ -12,9 +12,9 @@ Umbraco 17 member and backoffice external login provider for NemLog-in 3. This p
 - Map NemLog-in claims into the claims Umbraco needs for member auto-linking and backoffice user linking.
 - Auto-link members with configured approval state, member type, member groups, and profile data.
 - Allow existing backoffice users to manually link NemLog-in; backoffice auto-linking is disabled by default.
-- Expose a metadata endpoint backed by `Casko.NemLogin3.Web`.
+- Expose a metadata endpoint backed by `Casko.Authentication.NemLogin3.Web`.
 
-This project should contain Umbraco-specific behavior only. Low-level SAML configuration, claim constants, metadata generation, and standalone MVC login behavior belong in `Casko.NemLogin3.Web`.
+This project should contain Umbraco-specific behavior only. Low-level SAML configuration, claim constants, metadata generation, and standalone MVC login behavior belong in `Casko.Authentication.NemLogin3.Web`.
 
 ## Main Entry Point
 
@@ -119,7 +119,7 @@ The Umbraco host uses the shared `NemLogin3` and `Saml2` sections, plus member-s
 - `cprUuid` is the stable external provider key and is required. Missing `cprUuid` should fail login rather than create a weak link.
 - The synthetic member and backoffice emails are derived from CPR UUID and `SyntheticEmailDomain`; they are not real email addresses.
 - Backoffice auto-linking and approval both default to `false`. Set `AutoLinkExternalAccount=true` and `DefaultIsApproved=true` only when users created from NemLog-in should be able to sign in immediately.
-- Do not add standalone MVC session middleware from `Casko.NemLogin3.Web` here. This package uses `AddNemLogin3Saml(...)` and lets Umbraco own member sessions.
+- Do not add standalone MVC session middleware from `Casko.Authentication.NemLogin3.Web` here. This package uses `AddNemLogin3Saml(...)` and lets Umbraco own member sessions.
 - DevTest4 only permits one `AssertionConsumerService` per SP registration. For two IT-systems, member and backoffice use the same ACS path on different hosts. For one IT-system, member and backoffice share one ACS URL.
 - RelayState is stored in `IDistributedCache`. CM/CD environments should use the configured distributed SQL cache; single-node development falls back to distributed-memory cache.
 - The Umbraco AuthnRequest sets `AssertionConsumerServiceURL` from the active scheme callback path. With the default single-ACS setup, both member and backoffice requests point to `/Auth/AssertionConsumerService`.

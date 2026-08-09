@@ -59,7 +59,7 @@ Curated links for developers and AI agents working on the NemLog-in 3 SAML integ
 ## .NET And ITfoxtec
 
 - [ITfoxtec.Identity.Saml2 GitHub repository](https://github.com/ITfoxtec/ITfoxtec.Identity.Saml2)
-  Source repository for the SAML library used by `Casko.NemLogin3.Web`.
+  Source repository for the SAML library used by `Casko.Authentication.NemLogin3.Web`.
 
 - [ITfoxtec.Identity.Saml2 NuGet package](https://www.nuget.org/packages/ITfoxtec.Identity.Saml2)
   Package metadata and current published versions.
@@ -80,4 +80,3 @@ Curated links for developers and AI agents working on the NemLog-in 3 SAML integ
 
 - [Umbraco: Lightweight external members](https://docs.umbraco.com/umbraco-cms/run-in-production/security/lightweight-external-members)
   Explains `ExternalOnly` member behavior in Umbraco 17.4+.
-
