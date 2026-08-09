@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.HttpOverrides" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" />
+        <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" />
+        
+        <PackageReference Include="Umbraco.Cms.Core" />
+        <PackageReference Include="Umbraco.Cms.Infrastructure" />
+        
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\Casko.NemLogin3ForUmbraco\Casko.NemLogin3ForUmbraco.csproj" />
+    </ItemGroup>
+
+</Project>

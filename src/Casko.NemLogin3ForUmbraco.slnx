@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Casko.NemLogin3ForUmbraco.Web.UI/Casko.NemLogin3ForUmbraco.Web.UI.csproj" />
+  <Project Path="Casko.NemLogin3ForUmbraco.Web/Casko.NemLogin3ForUmbraco.Web.csproj" />
+  <Project Path="Casko.NemLogin3ForUmbraco.Yarp/Casko.NemLogin3ForUmbraco.Yarp.csproj" />
+  <Project Path="Casko.NemLogin3ForUmbraco/Casko.NemLogin3ForUmbraco.csproj" />
+</Solution>
