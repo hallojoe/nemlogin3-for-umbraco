@@ -9,7 +9,7 @@
       "name": "NemLog-in 3",
       "forProviderName": "Umbraco.NemLogin3",
       "meta": {
-        "label": "Sign in with NemLog-in",
+        "label": "MitID",
         "defaultView": {
           "icon": "icon-key"
         },
